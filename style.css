@@ -1,5 +1,5 @@
 /* ==========================================
-   1. CSS Variables & Reset
+   1. Colors & Variables
    ========================================== */
 :root {
     --bg-dark-blue: #0b132b;
@@ -15,7 +15,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    cursor: none; /* إخفاء الماوس العادي لاستخدام الماوس المضيء */
+    cursor: none;
 }
 
 body {
@@ -31,7 +31,7 @@ body {
 }
 
 /* ==========================================
-   2. Canvas Background (Particles)
+   2. Canvas Background
    ========================================== */
 #bg-canvas {
     position: fixed;
@@ -44,19 +44,40 @@ body {
 }
 
 /* ==========================================
-   3. Custom Glowing Cursor
+   3. Magic Star Cursor & Glow
    ========================================== */
 .custom-cursor {
-    width: 12px;
-    height: 12px;
-    background: var(--gold-primary);
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border: 2px solid var(--gold-primary);
     border-radius: 50%;
     position: fixed;
     pointer-events: none;
     z-index: 9999;
-    box-shadow: 0 0 15px var(--gold-primary), 0 0 30px var(--gold-primary);
+    box-shadow: 0 0 15px var(--gold-primary), 0 0 35px var(--gold-primary);
     transform: translate(-50%, -50%);
-    transition: transform 0.1s ease;
+    transition: transform 0.05s ease;
+}
+
+.star-particle {
+    position: fixed;
+    pointer-events: none;
+    color: var(--gold-primary);
+    font-size: 12px;
+    z-index: 9998;
+    animation: fadeAndScale 0.8s linear forwards;
+}
+
+@keyframes fadeAndScale {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.2) rotate(180deg);
+    }
 }
 
 /* ==========================================
@@ -217,7 +238,7 @@ body {
 }
 
 /* ==========================================
-   7. Sections & Cards Layout
+   7. Layout & Cards
    ========================================== */
 .section-heading {
     font-size: 1.25rem;
