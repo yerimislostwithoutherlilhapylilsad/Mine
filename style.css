@@ -1,0 +1,186 @@
+/* ==========================================
+   1. الألوان والمتغيرات (الأزرق، الموف، الدهبي، الفضي)
+   ========================================== */
+:root {
+    --bg-dark-blue: #0b132b;
+    --bg-deep-purple: #2a0845;
+    
+    --gold-primary: #d4af37;
+    --gold-gradient: linear-gradient(45deg, #bf953f, #fcf6ba, #b38728, #fbf5b7);
+    
+    --silver-primary: #e2e8f0;
+    --silver-glow: rgba(226, 232, 240, 0.15);
+    
+    --background-gradient: linear-gradient(135deg, var(--bg-dark-blue), var(--bg-deep-purple));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: var(--background-gradient);
+    color: var(--silver-primary);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* ==========================================
+   2. الحاوية الرئيسية (الكارت الكبير)
+   ========================================== */
+.container {
+    max-width: 650px;
+    width: 100%;
+    padding: 40px 30px;
+    text-align: center;
+    
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    
+    border: 1px solid var(--silver-glow);
+    border-radius: 28px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+/* ==========================================
+   3. البروفايل والعنوان
+   ========================================== */
+.profile-img img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--gold-primary);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.highlight {
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.bio {
+    font-size: 0.95rem;
+    color: #94a3b8;
+    margin-bottom: 25px;
+}
+
+/* ==========================================
+   4. الزرار الرئيسي لموقعك
+   ========================================== */
+.main-btn-container {
+    margin-bottom: 35px;
+}
+
+.btn-gold {
+    display: inline-block;
+    width: 100%;
+    padding: 14px 20px;
+    background: var(--gold-gradient);
+    color: #1a0927;
+    font-weight: 700;
+    font-size: 1.05rem;
+    text-decoration: none;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.2);
+    transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(212, 175, 55, 0.4);
+}
+
+/* ==========================================
+   5. تنسيق الأقسام الـ 7 (Sections Grid)
+   ========================================== */
+.sections-title {
+    font-size: 1.2rem;
+    color: var(--gold-primary);
+    margin-bottom: 15px;
+    text-align: right;
+    border-right: 3px solid var(--gold-primary);
+    padding-right: 10px;
+}
+
+.sections-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 35px;
+}
+
+/* كل قسم من الـ 7 أقسام */
+.section-card {
+    background: rgba(226, 232, 240, 0.05);
+    border: 1px solid rgba(226, 232, 240, 0.1);
+    border-radius: 12px;
+    padding: 15px 20px;
+    text-align: right;
+    transition: all 0.3s ease;
+}
+
+.section-card:hover {
+    background: rgba(226, 232, 240, 0.1);
+    border-color: var(--gold-primary);
+    transform: translateX(-5px); /* حركة جانبية لطيفة */
+}
+
+.section-card h3 {
+    font-size: 1.1rem;
+    color: var(--silver-primary);
+    margin-bottom: 5px;
+}
+
+.section-card p {
+    font-size: 0.85rem;
+    color: #a0aec0;
+}
+
+/* ==========================================
+   6. زراير السوشيال ميديا الـ 5
+   ========================================== */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(226, 232, 240, 0.06);
+    color: var(--silver-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.3rem;
+    border: 1px solid rgba(226, 232, 240, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* تأثير تحول الزراير للون الدهبي عند الماوس */
+.social-btn:hover {
+    background: var(--gold-gradient);
+    color: #000;
+    border-color: transparent;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.35);
+}
