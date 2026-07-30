@@ -3,13 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yerim | Personal Website</title>
+    <title>Yerim | Interactive Safe Zone</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <canvas id="bg-canvas"></canvas>
+
+    <div class="custom-cursor" id="cursor"></div>
+
+    <div class="music-player">
+        <button class="music-btn" id="musicToggle"><i class="fas fa-play" id="musicIcon"></i></button>
+        <span class="music-text">Ambient Zone</span>
+    </div>
+    <audio id="bgMusic" loop src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3"></audio>
 
     <div class="main-container">
         
@@ -21,12 +31,15 @@
             <p class="subtitle">Welcome to my personal corner and safe zone ✨</p>
             <p class="motto-tag">Run Bulletproof 💜</p>
 
-            <div class="action-button-wrapper">
-                <a href="https://awakingrenrei57.netlify.app/" target="_blank" class="primary-button">
-                    <i class="fas fa-globe"></i> Visit My Renrei Website
-                </a>
-            </div>
+            <a href="https://awakingrenrei57.netlify.app/" target="_blank" class="primary-button">
+                <i class="fas fa-globe"></i> Visit My Renrei Website
+            </a>
         </header>
+
+        <div class="quote-box">
+            <p class="quote-text" id="quoteText">"The future belongs to those who believe in the beauty of their dreams."</p>
+            <button class="quote-btn" id="quoteBtn"><i class="fas fa-magic"></i> New Inspiration</button>
+        </div>
 
         <main class="content-section">
             <h2 class="section-heading">Who I Am & What I Love</h2>
@@ -92,7 +105,7 @@
                         <h3>Life Philosophy</h3>
                     </div>
                     <p class="card-description">
-                        I believe that being perfection isn't the goal—learning is. Every single day is an opportunity to explore something new about the world, build meaningful connections, and leave behind a positive impact through art and code.
+                        I believe that perfection isn't the goal—learning is. Every single day is an opportunity to explore something new about the world, build meaningful connections, and leave behind a positive impact through art and code.
                     </p>
                 </article>
 
@@ -112,26 +125,17 @@
         <footer class="social-footer">
             <h3 class="footer-title">Connect With Me</h3>
             <div class="social-links-container">
-                <a href="https://instagram.com" target="_blank" class="social-icon" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://facebook.com" target="_blank" class="social-icon" title="Facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://tiktok.com" target="_blank" class="social-icon" title="TikTok">
-                    <i class="fab fa-tiktok"></i>
-                </a>
-                <a href="https://pinterest.com" target="_blank" class="social-icon" title="Pinterest">
-                    <i class="fab fa-pinterest-p"></i>
-                </a>
-                <a href="https://wa.me/1234567890" target="_blank" class="social-icon" title="WhatsApp">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
+                <a href="https://instagram.com" target="_blank" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com" target="_blank" class="social-icon" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://tiktok.com" target="_blank" class="social-icon" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://pinterest.com" target="_blank" class="social-icon" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                <a href="https://wa.me/1234567890" target="_blank" class="social-icon" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
             </div>
             <p class="copyright-text">&copy; 2026 Sumaya (Yerim). Designed with passion.</p>
         </footer>
 
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
