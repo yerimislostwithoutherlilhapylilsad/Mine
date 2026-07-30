@@ -1,5 +1,5 @@
 /* ==========================================
-   1. الألوان والمتغيرات (الأزرق، الموف، الدهبي، الفضي)
+   1. Colors & Variables
    ========================================== */
 :root {
     --bg-dark-blue: #0b132b;
@@ -32,10 +32,10 @@ body {
 }
 
 /* ==========================================
-   2. الحاوية الرئيسية (الكارت الكبير)
+   2. Main Wrapper
    ========================================== */
-.container {
-    max-width: 650px;
+.main-container {
+    max-width: 680px;
     width: 100%;
     padding: 40px 30px;
     text-align: center;
@@ -50,11 +50,11 @@ body {
 }
 
 /* ==========================================
-   3. البروفايل والعنوان
+   3. Profile Header Section
    ========================================== */
-.profile-img img {
-    width: 110px;
-    height: 110px;
+.profile-avatar img {
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid var(--gold-primary);
@@ -62,32 +62,39 @@ body {
     margin-bottom: 15px;
 }
 
-h1 {
-    font-size: 1.8rem;
+.hero-title {
+    font-size: 1.9rem;
     margin-bottom: 8px;
 }
 
-.highlight {
+.highlight-text {
     background: var(--gold-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
 }
 
-.bio {
-    font-size: 0.95rem;
+.subtitle {
+    font-size: 1rem;
     color: #94a3b8;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
 }
 
-/* ==========================================
-   4. الزرار الرئيسي لموقعك
-   ========================================== */
-.main-btn-container {
+.motto-tag {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--gold-primary);
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+/* Primary Button */
+.action-button-wrapper {
     margin-bottom: 35px;
 }
 
-.btn-gold {
+.primary-button {
     display: inline-block;
     width: 100%;
     padding: 14px 20px;
@@ -101,69 +108,129 @@ h1 {
     transition: all 0.3s ease;
 }
 
-.btn-gold:hover {
+.primary-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 12px 25px rgba(212, 175, 55, 0.4);
 }
 
 /* ==========================================
-   5. تنسيق الأقسام الـ 7 (Sections Grid)
+   4. Content Area & Cards Grid (7 Sections)
    ========================================== */
-.sections-title {
-    font-size: 1.2rem;
+.section-heading {
+    font-size: 1.25rem;
     color: var(--gold-primary);
-    margin-bottom: 15px;
-    text-align: right;
-    border-right: 3px solid var(--gold-primary);
-    padding-right: 10px;
+    margin-bottom: 20px;
+    text-align: left;
+    border-left: 3px solid var(--gold-primary);
+    padding-left: 12px;
 }
 
-.sections-grid {
+.cards-grid {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
     margin-bottom: 35px;
 }
 
-/* كل قسم من الـ 7 أقسام */
-.section-card {
+/* Info Cards */
+.info-card {
     background: rgba(226, 232, 240, 0.05);
     border: 1px solid rgba(226, 232, 240, 0.1);
-    border-radius: 12px;
-    padding: 15px 20px;
-    text-align: right;
+    border-radius: 14px;
+    padding: 18px 22px;
+    text-align: left;
     transition: all 0.3s ease;
 }
 
-.section-card:hover {
-    background: rgba(226, 232, 240, 0.1);
+.info-card:hover {
+    background: rgba(226, 232, 240, 0.08);
     border-color: var(--gold-primary);
-    transform: translateX(-5px); /* حركة جانبية لطيفة */
+    transform: translateX(5px);
 }
 
-.section-card h3 {
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.card-number {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: var(--gold-primary);
+    background: rgba(212, 175, 55, 0.15);
+    padding: 2px 8px;
+    border-radius: 6px;
+}
+
+.card-header h3 {
     font-size: 1.1rem;
     color: var(--silver-primary);
-    margin-bottom: 5px;
 }
 
-.section-card p {
-    font-size: 0.85rem;
-    color: #a0aec0;
+.card-date {
+    font-size: 0.8rem;
+    color: var(--gold-primary);
+    margin-bottom: 8px;
+    opacity: 0.9;
+}
+
+.card-description {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.card-description strong {
+    color: #fff;
+}
+
+/* Skills List inside Card 04 */
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 5px;
+}
+
+.skills-list li {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.skills-list li i {
+    color: var(--gold-primary);
+    width: 16px;
 }
 
 /* ==========================================
-   6. زراير السوشيال ميديا الـ 5
+   5. Footer & Social Links
    ========================================== */
-.social-links {
+.social-footer {
+    border-top: 1px solid var(--silver-glow);
+    padding-top: 25px;
+}
+
+.footer-title {
+    font-size: 1rem;
+    color: var(--silver-primary);
+    margin-bottom: 15px;
+}
+
+.social-links-container {
     display: flex;
     justify-content: center;
     gap: 15px;
+    margin-bottom: 20px;
 }
 
-.social-btn {
-    width: 50px;
-    height: 50px;
+.social-icon {
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     background: rgba(226, 232, 240, 0.06);
     color: var(--silver-primary);
@@ -171,16 +238,20 @@ h1 {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     border: 1px solid rgba(226, 232, 240, 0.2);
     transition: all 0.3s ease;
 }
 
-/* تأثير تحول الزراير للون الدهبي عند الماوس */
-.social-btn:hover {
+.social-icon:hover {
     background: var(--gold-gradient);
-    color: #000;
+    color: #1a0927;
     border-color: transparent;
-    transform: translateY(-5px);
+    transform: translateY(-4px);
     box-shadow: 0 8px 20px rgba(212, 175, 55, 0.35);
+}
+
+.copyright-text {
+    font-size: 0.8rem;
+    color: #64748b;
 }
