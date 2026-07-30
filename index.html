@@ -4,122 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yerim | Interactive Safe Zone</title>
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <canvas id="bg-canvas"></canvas>
+    <canvas id="bg"></canvas>
 
-    <div class="custom-cursor" id="cursor"></div>
+    <div class="cur" id="cur"></div>
 
-    <div class="music-player">
-        <button class="music-btn" id="musicToggle"><i class="fas fa-play" id="musicIcon"></i></button>
-        <span class="music-text">528Hz Safe Zone</span>
+    <div class="mp">
+        <button class="mb" id="mt"><i class="fas fa-play" id="mi"></i></button>
+        <span class="mtx">528Hz Safe Zone</span>
     </div>
 
-    <iframe id="youtube-player" 
-            src="https://www.youtube.com/embed/ZQkBmCJG9i8?enablejsapi=1&autoplay=0&loop=1&playlist=ZQkBmCJG9i8" 
-            style="display:none;" 
-            allow="autoplay">
-    </iframe>
+    <iframe id="yt" src="https://www.youtube.com/embed/ZQkBmCJG9i8?enablejsapi=1&autoplay=0&loop=1&playlist=ZQkBmCJG9i8" style="display:none;" allow="autoplay"></iframe>
 
-    <div class="main-container">
+    <div class="mc">
         
-        <header class="profile-header">
-            <div class="profile-avatar">
+        <header class="ph">
+            <div class="pa">
                 <img src="hyunjin.jfif" alt="Yerim Profile Picture">
             </div>
-            <h1 class="hero-title">Hello, I'm <span class="highlight-text">Yerim</span></h1>
-            <p class="subtitle">Welcome to my personal corner and safe zone ✨</p>
-            <p class="motto-tag">Run Bulletproof 💜</p>
+            <h1 class="ht">Hello, I'm <span class="hl">Yerim</span></h1>
+            <p class="st">Welcome to my personal corner and safe zone ✨</p>
+            <p class="mtg">Run Bulletproof 💜</p>
 
-            <a href="https://awakingrenrei57.netlify.app/" target="_blank" class="primary-button">
+            <a href="https://awakingrenrei57.netlify.app/" target="_blank" class="pb">
                 <i class="fas fa-globe"></i> Visit My Renrei Website
             </a>
         </header>
 
-        <div class="quote-box">
-            <p class="quote-text" id="quoteText">"The future belongs to those who believe in the beauty of their dreams."</p>
-            <button class="quote-btn" id="quoteBtn"><i class="fas fa-magic"></i> New Inspiration</button>
+        <div class="qb">
+            <p class="qt" id="qt">"The future belongs to those who believe in the beauty of their dreams."</p>
+            <button class="qb-btn" id="qb-btn"><i class="fas fa-magic"></i> New Inspiration</button>
         </div>
 
-        <main class="content-section">
-            <h2 class="section-heading">Who I Am & What I Love</h2>
+        <main class="cs">
+            <h2 class="sh">Who I Am & What I Love</h2>
             
-            <div class="cards-grid">
+            <div class="cg">
                 
-                <article class="info-card">
-                    <div class="card-header">
-                        <span class="card-number">01</span>
+                <article class="ic">
+                    <div class="ch">
+                        <span class="cn">01</span>
                         <h3>About Me</h3>
                     </div>
-                    <p class="card-date"><i class="far fa-calendar-alt"></i> July 30, 2026</p>
-                    <p class="card-description">
+                    <p class="cd"><i class="far fa-calendar-alt"></i> July 30, 2026</p>
+                    <p class="cdesc">
                         I am <strong>Sumaya Muhammad Qazamel</strong>, a 17-year-old developer and creator from Egypt. My journey with coding started when I was just a curious child. I’ve always been drawn to things outside standard classrooms—diving deep into logic, creativity, and technology.
                     </p>
                 </article>
 
-                <article class="info-card">
-                    <div class="card-header">
-                        <span class="card-number">02</span>
+                <article class="ic">
+                    <div class="ch">
+                        <span class="cn">02</span>
                         <h3>My Journey & Curiosity</h3>
                     </div>
-                    <p class="card-description">
+                    <p class="cdesc">
                         I never liked spending time doing nothing. I constantly ask myself: <em>"Who am I? Why am I here? What is my purpose?"</em> Growing up, my favorite shows all shared one central theme: <strong>Adventure and the quest for the unknown</strong>. That mindset naturally fueled my love for coding and discovery.
                     </p>
                 </article>
 
-                <article class="info-card">
-                    <div class="card-header">
-                        <span class="card-number">03</span>
+                <article class="ic">
+                    <div class="ch">
+                        <span class="cn">03</span>
                         <h3>Creative Mindset & Design</h3>
                     </div>
-                    <p class="card-description">
+                    <p class="cdesc">
                         Ever since I was little, I enjoyed drawing, writing, and experimenting with unique ideas. I am particularly fascinated by color harmony—how different tones blend together to evoke specific emotions and transform simple ideas into visually striking art.
                     </p>
                 </article>
 
-                <article class="info-card">
-                    <div class="card-header">
-                        <span class="card-number">04</span>
+                <article class="ic">
+                    <div class="ch">
+                        <span class="cn">04</span>
                         <h3>Skills & Passions</h3>
                     </div>
-                    <ul class="skills-list">
+                    <ul class="sl">
                         <li><i class="fas fa-code"></i> <strong>Frontend Development:</strong> HTML5, CSS3, Modern Layouts</li>
                         <li><i class="fas fa-paint-brush"></i> <strong>Visual Creativity:</strong> Color theory, digital art, UI design</li>
                         <li><i class="fas fa-search"></i> <strong>Research & Writing:</strong> Storytelling and continuous self-education</li>
                     </ul>
                 </article>
 
-                <article class="info-card">
-                    <div class="card-header">
-                        <span class="card-number">05</span>
+                <article class="ic">
+                    <div class="ch">
+                        <span class="cn">05</span>
                         <h3>Featured Projects</h3>
                     </div>
-                    <p class="card-description">
+                    <p class="cdesc">
                         Beyond building web spaces, I work on creative concepts like my <strong>Renrei Project</strong>. I enjoy crafting digital environments where aesthetics meet functionality, offering visitors a peaceful and meaningful interactive experience.
                     </p>
                 </article>
 
-                <article class="info-card">
-                    <div class="card-header">
-                        <span class="card-number">06</span>
+                <article class="ic">
+                    <div class="ch">
+                        <span class="cn">06</span>
                         <h3>Life Philosophy</h3>
                     </div>
-                    <p class="card-description">
+                    <p class="cdesc">
                         I believe that perfection isn't the goal—learning is. Every single day is an opportunity to explore something new about the world, build meaningful connections, and leave behind a positive impact through art and code.
                     </p>
                 </article>
 
-                <article class="info-card">
-                    <div class="card-header">
-                        <span class="card-number">07</span>
+                <article class="ic">
+                    <div class="ch">
+                        <span class="cn">07</span>
                         <h3>Future Goals</h3>
                     </div>
-                    <p class="card-description">
+                    <p class="cdesc">
                         My ultimate goal is to bridge the gap between design and software engineering. I aim to create impactful platforms, master advanced technologies, and inspire young developers in tech across Egypt and beyond.
                     </p>
                 </article>
@@ -127,16 +121,16 @@
             </div>
         </main>
 
-        <footer class="social-footer">
-            <h3 class="footer-title">Connect With Me</h3>
-            <div class="social-links-container">
-                <a href="https://instagram.com" target="_blank" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://facebook.com" target="_blank" class="social-icon" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://tiktok.com" target="_blank" class="social-icon" title="TikTok"><i class="fab fa-tiktok"></i></a>
-                <a href="https://pinterest.com" target="_blank" class="social-icon" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
-                <a href="https://wa.me/1234567890" target="_blank" class="social-icon" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <footer class="sf">
+            <h3 class="ft">Connect With Me</h3>
+            <div class="sc">
+                <a href="https://instagram.com" target="_blank" class="si" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com" target="_blank" class="si" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://tiktok.com" target="_blank" class="si" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://pinterest.com" target="_blank" class="si" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                <a href="https://wa.me/1234567890" target="_blank" class="si" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
             </div>
-            <p class="copyright-text">&copy; 2026 Sumaya (Yerim). Designed with passion.</p>
+            <p class="crt">&copy; 2026 Sumaya (Yerim). Designed with passion.</p>
         </footer>
 
     </div>
