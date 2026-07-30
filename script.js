@@ -1,28 +1,53 @@
-// --- 1. Custom Glowing Cursor ---
+// --- 1. Magic Wand Star Cursor ---
 const cursor = document.getElementById('cursor');
+
 document.addEventListener('mousemove', (e) => {
     cursor.style.left = e.clientX + 'px';
     cursor.style.top = e.clientY + 'px';
+    createStar(e.clientX, e.clientY);
 });
 
-// --- 2. Background Ambient Music Toggle ---
-const music = document.getElementById('bgMusic');
+function createStar(x, y) {
+    const star = document.createElement('i');
+    star.className = 'fas fa-star star-particle';
+    
+    const offsetX = (Math.random() - 0.5) * 20;
+    const offsetY = (Math.random() - 0.5) * 20;
+    
+    star.style.left = (x + offsetX) + 'px';
+    star.style.top = (y + offsetY) + 'px';
+    
+    const size = Math.random() * 10 + 6;
+    star.style.fontSize = size + 'px';
+    
+    document.body.appendChild(star);
+
+    setTimeout(() => {
+        star.remove();
+    }, 800);
+}
+
+// --- 2. YouTube Audio Control (الربط بفيديو اليوتيوب) ---
+const ytPlayer = document.getElementById('youtube-player');
 const musicBtn = document.getElementById('musicToggle');
 const musicIcon = document.getElementById('musicIcon');
 let isPlaying = false;
 
 musicBtn.addEventListener('click', () => {
     if (!isPlaying) {
-        music.play();
+        // تشغيل صوت فيديو اليوتيوب
+        ytPlayer.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
         musicIcon.className = 'fas fa-pause';
+        isPlaying = true;
     } else {
-        music.pause();
+        // إيقاف صوت فيديو اليوتيوب
+        ytPlayer.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
         musicIcon.className = 'fas fa-play';
+        isPlaying = false;
     }
-    isPlaying = !isPlaying;
 });
 
-// --- 3. Interactive Quote Generator ---
+// --- 3. Quote Generator ---
 const quotes = [
     "\"The future belongs to those who believe in the beauty of their dreams.\"",
     "\"Code is like humor. When you have to explain it, it’s bad.\"",
@@ -38,7 +63,7 @@ quoteBtn.addEventListener('click', () => {
     document.getElementById('quoteText').innerText = quotes[randomIndex];
 });
 
-// --- 4. Scroll Reveal Animations for Cards ---
+// --- 4. Scroll Reveal Animations ---
 const cards = document.querySelectorAll('.info-card');
 const revealCards = () => {
     cards.forEach(card => {
@@ -49,9 +74,9 @@ const revealCards = () => {
     });
 };
 window.addEventListener('scroll', revealCards);
-revealCards(); // Run once on load
+revealCards();
 
-// --- 5. Interactive Particle Galaxy Background (النجوم المتحركة) ---
+// --- 5. Particle Galaxy Background ---
 const canvas = document.getElementById('bg-canvas');
 const ctx = canvas.getContext('2d');
 
