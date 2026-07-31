@@ -25,6 +25,9 @@ TikTok: @renrei573
 
 Arwa's README:
 https://github.com/arwa8sameh4wewewe/ME/blob/main/README.md
-
+Arwa's Project:
+https://arwasameh.netlify.app/
+Arwa's GitHub:
+https://github.com/arwa8sameh4wewewe/ME
 Pinterest: siraisia573
 
